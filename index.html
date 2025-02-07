@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <!-- INICIO DE SESION -->
+    <div class="displayCenter inicioSecion">
+        <section class="sombra" id="inicioSecion">
+            <h2 class="sombra bg-primary" id="inicioCliente" onclick="paginaCliente()">INICIAR COMO CLIENTE</h2>
+            <script>
+                function paginaCliente() { window.location.href = "../PAGINAS/clientes.html" }
+            </script>
+
+            <h2 class="sombra bg-primary" id="inicioAdmin">INICIAR COMO
+                ADMINISTRADOR</h2>
+            <script>
+                document.getElementById("inicioAdmin").addEventListener("click", function () {
+                    document.querySelector(".inicioSecion").style.display = "none";
+                    document.querySelector(".form-container").style.display = "flex";
+                });
+            </script>
+        </section>
+    </div>
+    <!-- -------------------------------------------------- -->
+
+    <!-- LOGIN ADMINISTRADOR -->
+    <div class="displayCenter form-container " style="display: none;">
+        <div class="sombra">
+            <h3 class="text-center">Iniciar Sesión</h3>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="username" name="username" required
+                        placeholder="Ingrese su usuario">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="password" name="password" required
+                        placeholder="Ingrese su contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
+                <button type="button" class="btn btn-secondary mt-3" id="cerrarLogin">Cerrar</button>
+            </form>
+            <script>
+                let intentos = 0;
+
+                document.getElementById("loginForm").addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const username = document.getElementById("username").value;
+                    const password = document.getElementById("password").value;
+
+                    if (intentos < 3) {
+                        if (username === "admin" && password === "1234") {
+                            Swal.fire({
+                                title: "Datos correctos",
+                                html: "Sesion Iniciada",
+                                icon: "success",
+                                showCancelButton: false,
+                                showConfirmButton: false,
+                            });
+                            setTimeout(() => {
+                                window.location.href = "../PAGINAS/admin.html";
+                            }, 1500);
+                        } else {
+                            intentos++;
+
+                            if (intentos < 3) {
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: `Datos incorrectos, vuelva a intentar. ${intentos}/3`,
+                                    icon: 'warning',
+                                    confirmButtonText: 'Aceptar'
+                                });
+                            } else if (intentos === 3) {
+                                Swal.fire({
+                                    title: 'Ups...',
+                                    html: `Número máximo de intentos alcanzado ${intentos}/3. <br> Pruebe más tarde.`,
+                                    icon: 'error',
+                                    showCancelButton: false,
+                                    showConfirmButton: false,
+                                });
+                                setTimeout(() => {
+                                    window.location.reload();
+                                }, 4000);
+                            }
+                        }
+                    }
+                });
+                document.getElementById("cerrarLogin").addEventListener("click", function () {
+                    document.querySelector(".form-container").style.display = "none";
+                    document.querySelector(".inicioSecion").style.display = "flex";
+                });
+            </script>
+        </div>
+    </div>
+    <!-- -------------------------------------------------- -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

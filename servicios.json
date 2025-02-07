@@ -1,0 +1,170 @@
+{
+  "eventoBoda": [
+    {
+      "nombreEvento": "Boda",
+      "Id": 1,
+      "servicio": "Fotos previas pareja",
+      "precio": 100
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 2,
+      "servicio": "Video previo pareja",
+      "precio": 100
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 3,
+      "servicio": "Fotos evento (1/2 evento)",
+      "precio": 300
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 4,
+      "servicio": "Video evento (1/2 evento)",
+      "precio": 250
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 5,
+      "servicio": "Fotos evento (Evento completo)",
+      "precio": 500
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 6,
+      "servicio": "Video evento (Evento completo)",
+      "precio": 450
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 7,
+      "servicio": "Foto impresas 30",
+      "precio": 45
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 8,
+      "servicio": "Foto impresas 50",
+      "precio": 60
+    },
+    {
+      "nombreEvento": "Boda",
+      "Id": 9,
+      "servicio": "Foto impresas 100",
+      "precio": 100
+    }
+  ],
+  "eventoCumpleaños": [
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 1,
+      "servicio": "Fotos previas Cumpleañera",
+      "precio": 100
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 2,
+      "servicio": "Video previo Cumpleañera",
+      "precio": 100
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 3,
+      "servicio": "Fotos evento (1/2 evento)",
+      "precio": 250
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 4,
+      "servicio": "Video evento (1/2 evento)",
+      "precio": 200
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 5,
+      "servicio": "Fotos evento (Evento completo)",
+      "precio": 450
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 6,
+      "servicio": "Video evento (Evento completo)",
+      "precio": 350
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 7,
+      "servicio": "Foto impresas 30",
+      "precio": 45
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 8,
+      "servicio": "Foto impresas 50",
+      "precio": 60
+    },
+    {
+      "nombreEvento": "Cumpleaños XV",
+      "Id": 9,
+      "servicio": "Foto impresas 100",
+      "precio": 100
+    }
+  ],
+  "eventoRecepcion": [
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 1,
+      "servicio": "Fotos previas grupal",
+      "precio": 150
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 2,
+      "servicio": "Video previo grupal",
+      "precio": 150
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 3,
+      "servicio": "Fotos evento (1/2 evento)",
+      "precio": 400
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 4,
+      "servicio": "Video evento (1/2 evento)",
+      "precio": 300
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 5,
+      "servicio": "Fotos evento (Evento completo)",
+      "precio": 750
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 6,
+      "servicio": "Video evento (Evento completo)",
+      "precio": 550
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 7,
+      "servicio": "Foto impresas 100",
+      "precio": 100
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 8,
+      "servicio": "Foto impresas 200",
+      "precio": 180
+    },
+    {
+      "nombreEvento": "Recepcion",
+      "Id": 9,
+      "servicio": "Foto impresas 300",
+      "precio": 240
+    }
+  ]
+}

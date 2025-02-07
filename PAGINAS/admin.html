@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <div class="contenedorFiltro">
+        <section class="sombra" id="sectionFiltrar">
+            <div>
+                <button class="btn btn-primary mt-3" type="button" id="buscarNombre">BUSCAR POR NOMBRE</button> <br>
+                <form class="display" id="formularioName">
+                    <input type="text" id="filtroName" placeholder="INGRESA UN NOMBRE">
+                </form>
+                <button class="btn btn-primary mt-3" type="button" id="buscarApellido">BUSCAR POR APELLIDO</button> <br>
+                <form class="display" id="formularioLastName">
+                    <input type="text" id="filtroLastName" placeholder="INGRESA UN APELLIDO">
+                </form>
+                <button class="btn btn-primary mt-3" type="button" id="buscarDni">BUSCAR POR DNI</button> <br>
+                <form class="display" id="formularioDni">
+                    <input type="text" id="filtroDni" placeholder="INGRESA UN DNI">
+                </form>
+                <div class="text-center mt-2">
+                    <select id="evento">
+                        <option value="" disabled selected>Selecciona un evento</option>
+                        <option value="Boda">Boda</option>
+                        <option value="Cumpleaños XV">Cumpleaños XV</option>
+                        <option value="Recepcion">Recepción</option>
+                    </select>
+                </div>
+                <button class="btn btn-secondary mt-3" type="button" id="refrescar">Cerrar</button>
+            </div>
+
+            <div class="sombra mt-2" id="resultado">
+                <h3>INGRESA UN DATO <br> PARA INICIAR LA BUSQUEDA.</h3>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../JS/admin.js"></script>
+</body>
+
+</html>

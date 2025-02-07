@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <!-- FORMULARIO REGISTRO -->
+    <div class="displayCenter" id="formularioCliente">
+        <form class="sombra">
+            <h3 class="mb-3">Ingrese sus datos</h3>
+
+            <input class="form-control mt-3" type="text" id="nombre" name="nombreCliente" placeholder="Nombre"
+                pattern="[A-Za-z]+" title="Solo se permiten letras" required>
+
+            <input class="form-control mt-3" type="text" id="apellido" name="apellidoCliente" placeholder="Apellido"
+                pattern="[A-Za-z]+" title="Solo se permiten letras" required>
+
+            <input class="form-control mt-3" type="text" id="dni" name="dniCliente" required placeholder="DNI"
+                pattern="\d+" title="Solo se permiten números">
+
+            <input class="form-control mt-3" type="tel" id="telefono" name="telCliente"
+                placeholder="Telefono sin 0 y 15" pattern="^\d{10}$" title="Ingrese un N° de telefono valido" required>
+
+            <input class="form-control mt-3" type="email" id="correo" name="correoCliente" placeholder="Correo">
+
+            <p class="display mt-3" id="mensajeDni">Ya se registro este DNI, utiliza otro o <br> contacta al proveedor
+                para
+                un
+                nuevo presupuesto.</p>
+
+            <button class="btn btn-primary w-100 mt-3" type="submit" id="enviarForm">Enviar</button>
+            <button class="btn btn-secondary mt-3" type="button" id="principal1">Cerrar</button>
+        </form>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+
+    <!-- SELECCION DE EVENTO (CREADO DINAMICAMENTE) -->
+    <div class="displayCenter display" id="contenedorEvento">
+        <div class="sombra subContenedorEvento">
+            <section id="tipoEvento">
+                <div id="imgBoda">
+                    <img src="https://img.freepik.com/foto-gratis/novio-poniendo-anillo-dedo-novia_1157-338.jpg"
+                        class="rounded mx-auto d-block" alt="...">
+                </div>
+                <div id="imgCumple">
+                    <img src="https://rodriguezmansilla.com/wp-content/uploads/2016/04/304_fotografo-de-15-anos-carmin-eventos-mia_25.jpg"
+                        class="rounded mx-auto d-block" alt="...">
+                </div>
+                <div id="imgBautismo">
+                    <img src="https://s3-eu-west-1.amazonaws.com/s3objetos/megacms/b12/album/427/fiesta-graduacion-madrid.png"
+                        class="rounded mx-auto d-block" alt="...">
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+
+    <!-- CHECKBOX (CREADO DINAMICAMENTE) -->
+    <div class="displayCenter display" id="contenedorCheckbox">
+        <div id="checkboxesContainer">
+            <h3 class="mt-3" id="costoTotal">Total: $0</h3>
+            <button class="btn btn-primary w-100 mt-3" type="button" id="submitButton" disabled>Confirmar
+                Servicios</button>
+            <div class="text-center">
+                <button class="btn btn-secondary mt-3" type="button" id="principal2">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../JS/clientes.js"></script>
+</body>
+
+</html>
