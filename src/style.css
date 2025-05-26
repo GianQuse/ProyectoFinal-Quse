@@ -1,0 +1,457 @@
+/*INICIO ESTILO GLOBAL*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedorPrincipal {
+  width: 100%;
+  max-width: 768px;
+  background-color: white;
+}
+
+.swal2-timer-progress-bar {
+  background-color: red !important;
+  height: 3px !important;
+  border-radius: 4px;
+}
+
+.swal2-title {
+  margin-bottom: 15px !important;
+  color: #333;
+}
+
+/*INICIO NAVBAR*/
+
+.contenedorImgLocal {
+  position: relative;
+  width: 100%;
+  height: 230px;
+}
+
+.imgLocal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.contenedorLogo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.imgLogo {
+  height: 100%;
+  width: 100%;
+}
+
+/*FIN NAVBAR*/
+
+/*INICIO BOTON PRINCIPAL*/
+
+.contenedorBotonCarta {
+  width: 100%;
+  height: 40px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+  background-color: white;
+  border-radius: 100% 100% 0 0;
+  position: relative;
+  z-index: 99;
+}
+
+.botonCarta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 65%;
+  padding: 10px 0;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 3px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botonCarta:hover:not(:disabled) {
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 5px 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.botonCarta:disabled {
+  cursor: default;
+  ;
+}
+
+
+/*FIN BOTON PRINCIPAL*/
+
+/*INICIO SUBTITULO H2*/
+.menu-title {
+  font-family: sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 15px 0;
+  color: #333;
+}
+
+/*FIN SUBTITULO H2*/
+
+.contenedor-plato {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.plato-card {
+  width: 85%;
+  max-width: 370px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 20px auto;
+}
+
+/* Estilo para las imágenes de los platos */
+.plato-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la información del plato */
+.plato-info {
+  padding: 8px 0 4px;
+  border-top: 1px solid #eee;
+}
+
+/* Estilo para el nombre del plato */
+.plato-nombre {
+  margin: 4px 0;
+  font-size: 1.1rem;
+}
+
+/* Estilo para la descripción del plato */
+.plato-descripcion {
+  margin: 2px 0;
+  font-weight: normal;
+  color: #666;
+}
+
+/* Estilo para los precios */
+.plato-precio {
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+.menu-principal-card {
+  position: relative;
+  width: 85%;
+  max-width: 400px;
+  height: 100px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-principal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+}
+
+.menu-principal-titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  letter-spacing: 2px;
+}
+
+.menu-principal-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.menu-principal-card:hover .menu-principal-img {
+  filter: brightness(0.8);
+}
+
+/* Estilo para la lista general */
+.todos-platos-lista {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: sans-serif;
+}
+
+/* Estilo para el Link de cada plato */
+.menu-principal-link {
+  text-decoration: none;
+}
+
+/* Estilo para cada contenedor de plato */
+.plato-detalle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.plato-detalle-texto {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+/* Hover en cada plato */
+.plato-detalle:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+}
+
+/* Estilo para el nombre del plato */
+.nombre-plato {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilo para el precio */
+.precio-plato {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.plato-button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.plato-card button:hover {
+  background-color: #0056b3;
+}
+
+.descripcion-plato {
+  font-size: 0.6rem;
+  color: #666;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  margin-top: 30px;
+  padding: 40px 0 25px 0;
+  text-align: center;
+}
+
+.contenedorRedes {
+  display: flex;
+  justify-content: center;
+}
+
+.iconosRedes {
+  width: 35px;
+  margin: 20px 25px;
+  cursor: pointer;
+  filter: invert();
+}
+
+/*---------------------------------------------------------*/
+
+/*INICIO CONTADOR PLATO*/
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 24px;
+  padding: 15px 30px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.counter-button {
+  padding: 10px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.counter-button:active {
+  transform: scale(0.95);
+}
+
+.counter-button.decrement {
+  background-color: #e74c3c;
+  /* rojo */
+}
+
+.counter-button.decrement:hover {
+  background-color: #c0392b;
+}
+
+.counter-button.increment {
+  background-color: #2ecc71;
+  /* verde */
+}
+
+.counter-button.increment:hover {
+  background-color: #27ae60;
+}
+
+.counter-value {
+  min-width: 40px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+/*INICIO BOTON CARRITO*/
+
+.cart-icon-button {
+  width: 20px;
+  height: 20px;
+  filter: invert();
+  margin-left: 5px;
+}
+
+.add-to-cart-modern {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 15px 0;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(0, 112, 243, 0.2);
+}
+
+.add-to-cart-modern:hover {
+  background-color: #0070f3;
+}
+
+.add-to-cart-modern:active {
+  transform: scale(0.96);
+}
+
+/*FIN BOTON CARRITO*/
+
+/*FIN CONTADOR PLATO*/
+
+/*INICIO CARRITO FLOTANTE*/
+.floating-cart {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: #14b8a6;
+  border-radius: 50%;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.floating-cart:hover {
+  background-color: #0f766e;
+}
+
+.cart-icon {
+  width: 32px;
+  height: 32px;
+  filter: invert();
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #f97316;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 7px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/*FIN CARRITO FLOTANTE*/
