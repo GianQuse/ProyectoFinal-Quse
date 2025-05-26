@@ -12,20 +12,27 @@ export const CheckCart = () => {
     const { totalPrice, cart, clearCart } = useContext(cartContext);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [nombre, setNombre] = useState("");
-    const [apellido, setApellido] = useState("");
-    const [direccion, setDireccion] = useState("");
-    const [telefono, setTelefono] = useState(0);
+
+    const [values, setValues] = useState({
+        nombre: "",
+        apellido: "",
+        direccion: "",
+        telefono: "",
+    });
+
+    function onChange(e) {
+        setValues({ ...values, [e.target.name]: e.target.value, });
+    };
 
     const handleCreateOrder = () => {
         const db = getFirestore();
         const collectionRef = collection(db, "orders");
         const orderData = {
             comprador: {
-                nombre: nombre,
-                apellido: apellido,
-                direccion: direccion,
-                telefono: telefono,
+                nombre: values.nombre,
+                apellido: values.apellido,
+                direccion: values.direccion,
+                telefono: values.telefono,
             },
             total: totalPrice(),
             productos: cart,
@@ -64,19 +71,6 @@ export const CheckCart = () => {
         handleCreateOrder();
     };
 
-    const handleChangeNombre = (e) => {
-        setNombre(e.target.value)
-    }
-    const handleChangeApellido = (e) => {
-        setApellido(e.target.value)
-    }
-    const handleChangeDireccion = (e) => {
-        setDireccion(e.target.value)
-    }
-    const handleChangeTelefono = (e) => {
-        setTelefono(e.target.value)
-    }
-
     return (
         <div className={styles.container}>
             <form className={styles.form} onSubmit={handleSubmit}>
@@ -86,7 +80,7 @@ export const CheckCart = () => {
                     name="nombre"
                     placeholder="Nombre"
                     className={styles.input}
-                    onChange={handleChangeNombre}
+                    onChange={onChange}
                     required
                 />
                 <input
@@ -94,7 +88,7 @@ export const CheckCart = () => {
                     name="apellido"
                     placeholder="Apellido"
                     className={styles.input}
-                    onChange={handleChangeApellido}
+                    onChange={onChange}
                     required
                 />
                 <input
@@ -102,7 +96,7 @@ export const CheckCart = () => {
                     name="direccion"
                     placeholder="Dirección"
                     className={styles.input}
-                    onChange={handleChangeDireccion}
+                    onChange={onChange}
                     required
                 />
                 <input
@@ -110,7 +104,7 @@ export const CheckCart = () => {
                     name="telefono"
                     placeholder="Teléfono"
                     className={styles.input}
-                    onChange={handleChangeTelefono}
+                    onChange={onChange}
                     required
                     pattern="^\d{3}\d{7}$|^\d{4}\d{6}$"
                     title="Ingresa un número válido"
